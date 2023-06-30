@@ -51,5 +51,21 @@ parameter and return Happy or Sad Mood
             // Assert
             Assert.AreEqual("Unknown Mood", mood);
         }
+        /*
+         * Given “I am in Sad Mood” message Should Return SAD analyseMood method can just return SAD to pass this Test Case (TC)
+         */
+        [TestMethod]
+        public void AnalyseMood_WithSadMessage_ReturnsSadMood1()
+        {
+            // Arrange
+            string message = "I am in Sad Mood";
+            MoodAnalyser analyser = new MoodAnalyser(message);
+
+            // Act
+            string mood = analyser.AnalyseMood1();
+
+            // Assert
+            Assert.AreEqual("SAD", mood);
+        }
     }
 }
